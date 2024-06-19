@@ -26,8 +26,8 @@ async def auto_leave():
                         ]:
                             if (
                                 i.chat.id != config.LOG_GROUP_ID
-                                and i.chat.id != -1001686672798
-                                and i.chat.id != -1001549206010
+                                and i.chat.id != -1002166853638
+                                and i.chat.id != -1002166853638
                             ):
                                 if left == 20:
                                     continue
@@ -65,7 +65,7 @@ async def auto_end():
                 try:
                     await app.send_message(
                         chat_id,
-                        "» ʙᴏᴛ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ʟᴇғᴛ ᴠɪᴅᴇᴏᴄʜᴀᴛ ʙᴇᴄᴀᴜsᴇ ɴᴏ ᴏɴᴇ ᴡᴀs ʟɪsᴛᴇɴɪɴɢ ᴏɴ ᴠɪᴅᴇᴏᴄʜᴀᴛ.",
+                        "» bot automatically left videochat because no one was listening on videochat.",
                     )
                 except:
                     continue
