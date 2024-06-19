@@ -31,27 +31,27 @@ async def inline_query_handler(client, query):
             channel = result[x]["channel"]["name"]
             link = result[x]["link"]
             published = result[x]["publishedTime"]
-            description = f"{views} | {duration} ᴍɪɴᴜᴛᴇs | {channel}  | {published}"
+            description = f"{views} | {duration} minutes | {channel}  | {published}"
             buttons = InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="𝖸𝗈𝗎𝖳𝗎𝖻𝖾 🎄",
+                            text="𝖸𝗈𝗎𝖳𝗎𝖻𝖾 ⚡",
                             url=link,
                         )
                     ],
                 ]
             )
             searched_text = f"""
-❄ <b>ᴛɪᴛʟᴇ :</b> <a href={link}>{title}</a>
+⚡ <b>title :</b> <a href={link}>{title}</a>
 
-⏳ <b>𝖣𝗎𝗋𝖺𝗍𝗂𝗈𝗇 :</b> {duration} ᴍɪɴᴜᴛᴇs
-👀 <b>𝖵𝗂𝖾𝗐𝗌 :</b> <code>{views}</code>
-🎥 <b>𝖢𝗁𝖺𝗇𝗇𝖾𝗅 :</b> <a href={channellink}>{channel}</a>
-⏰ <b>𝖯𝗎𝖻𝗅𝗂𝗌𝗁𝖾𝖽 𝖮𝗇 :</b> {published}
+⏳ <b>Duration :</b> {duration} minutes
+👀 <b>Views :</b> <code>{views}</code>
+🎥 <b>Channel :</b> <a href={channellink}>{channel}</a>
+⏰ <b>Published On :</b> {published}
 
 
-<u><b>➻ ɪɴʟɪɴᴇ sᴇᴀʀᴄʜ ᴍᴏᴅᴇ ʙʏ {app.name}</b></u>"""
+<u><b>➻ inline search mode by {app.name}</b></u>"""
             answers.append(
                 InlineQueryResultPhoto(
                     photo_url=thumbnail,
