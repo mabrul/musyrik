@@ -25,7 +25,7 @@ def setting_markup(_):
 def vote_mode_markup(_, current, mode: Union[bool, str] = None):
     buttons = [
         [
-            InlineKeyboardButton(text="𝖵𝗈𝗍𝗂𝗇𝗀 𝖬𝗈𝖽𝖾 ➜", callback_data="VOTEANSWER"),
+            InlineKeyboardButton(text="Voting Mode ➜", callback_data="VOTEANSWER"),
             InlineKeyboardButton(
                 text=_["ST_B_5"] if mode == True else _["ST_B_6"],
                 callback_data="VOMODECHANGE",
@@ -34,7 +34,7 @@ def vote_mode_markup(_, current, mode: Union[bool, str] = None):
         [
             InlineKeyboardButton(text="-2", callback_data="FERRARIUDTI M"),
             InlineKeyboardButton(
-                text=f"ᴄᴜʀʀᴇɴᴛ : {current}",
+                text=f"Current : {current}",
                 callback_data="ANSWERVOMODE",
             ),
             InlineKeyboardButton(text="+2", callback_data="FERRARIUDTI A"),
