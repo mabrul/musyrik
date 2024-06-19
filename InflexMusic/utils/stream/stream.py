@@ -56,7 +56,7 @@ async def stream(
             if await is_active_chat(chat_id):
                 check = db.get(chat_id) 
                 if len(check) > config.QUEUE_LIMIT:
-                    return await app.send_message(chat_id, "𝖸𝗈𝗎 𝖢𝖺𝗇'𝗍 𝖠𝖽𝖽 𝖬𝗈𝗋𝖾 𝖲𝗈𝗇𝗀𝗌 𝖨𝗇 𝖰𝗎𝖾𝗎𝖾 .")
+                    return await app.send_message(chat_id, "You Can't Add More Songs In Queue .")
                 await put_queue(
                     chat_id,
                     original_chat_id,
@@ -149,7 +149,7 @@ async def stream(
         if await is_active_chat(chat_id):
             check = db.get(chat_id) 
             if len(check) > config.QUEUE_LIMIT:
-                return await app.send_message(chat_id, "𝖸𝗈𝗎 𝖢𝖺𝗇'𝗍 𝖠𝖽𝖽 𝖬𝗈𝗋𝖾 𝖲𝗈𝗇𝗀𝗌 𝖨𝗇 𝖰𝗎𝖾𝗎𝖾 .")
+                return await app.send_message(chat_id, "You Can't Add More Songs In Queue .")
             await put_queue(
                 chat_id,
                 original_chat_id,
@@ -212,7 +212,7 @@ async def stream(
         if await is_active_chat(chat_id):
             check = db.get(chat_id) 
             if len(check) > config.QUEUE_LIMIT:
-                return await app.send_message(chat_id, "𝖸𝗈𝗎 𝖢𝖺𝗇'𝗍 𝖠𝖽𝖽 𝖬𝗈𝗋𝖾 𝖲𝗈𝗇𝗀𝗌 𝖨𝗇 𝖰𝗎𝖾𝗎𝖾 .")
+                return await app.send_message(chat_id, "You Can't Add More Songs In Queue .")
             await put_queue(
                 chat_id,
                 original_chat_id,
@@ -267,7 +267,7 @@ async def stream(
         if await is_active_chat(chat_id):
             check = db.get(chat_id) 
             if len(check) > config.QUEUE_LIMIT:
-                return await app.send_message(chat_id, "𝖸𝗈𝗎 𝖢𝖺𝗇'𝗍 𝖠𝖽𝖽 𝖬𝗈𝗋𝖾 𝖲𝗈𝗇𝗀𝗌 𝖨𝗇 𝖰𝗎𝖾𝗎𝖾 .")
+                return await app.send_message(chat_id, "You Can't Add More Songs In Queue .")
             await put_queue(
                 chat_id,
                 original_chat_id,
@@ -323,7 +323,7 @@ async def stream(
         if await is_active_chat(chat_id):
             check = db.get(chat_id) 
             if len(check) > config.QUEUE_LIMIT:
-                return await app.send_message(chat_id, "𝖸𝗈𝗎 𝖢𝖺𝗇'𝗍 𝖠𝖽𝖽 𝖬𝗈𝗋𝖾 𝖲𝗈𝗇𝗀𝗌 𝖨𝗇 𝖰𝗎𝖾𝗎𝖾 .")
+                return await app.send_message(chat_id, "You Can't Add More Songs In Queue .")
             await put_queue(
                 chat_id,
                 original_chat_id,
@@ -384,12 +384,12 @@ async def stream(
             db[chat_id][0]["markup"] = "tg"
     elif streamtype == "index":
         link = result
-        title = "ɪɴᴅᴇx ᴏʀ ᴍ3ᴜ8 ʟɪɴᴋ"
+        title = "index or m3u8 link"
         duration_min = "00:00"
         if await is_active_chat(chat_id):
             check = db.get(chat_id) 
             if len(check) > config.QUEUE_LIMIT:
-                return await app.send_message(chat_id, "𝖸𝗈𝗎 𝖢𝖺𝗇'𝗍 𝖠𝖽𝖽 𝖬𝗈𝗋𝖾 𝖲𝗈𝗇𝗀𝗌 𝖨𝗇 𝖰𝗎𝖾𝗎𝖾 .")
+                return await app.send_message(chat_id, "You Can't Add More Songs In Queue .")
             await put_queue_index(
                 chat_id,
                 original_chat_id,
