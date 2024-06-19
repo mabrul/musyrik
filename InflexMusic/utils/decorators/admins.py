@@ -24,7 +24,7 @@ def AdminRightsCheck(mystic):
         if await is_maintenance() is False:
             if message.from_user.id not in SUDOERS:
                 return await message.reply_text(
-                    text=f"{app.mention} 𝖨𝗌 𝖴𝗇𝖽𝖾𝗋 𝖬𝖺𝗂𝗇𝗍𝖾𝗇𝖺𝗇𝖼𝖾 , 𝖵𝗂𝗌𝗂𝗍 <a href={SUPPORT_GROUP}>𝖲𝗎𝗉𝗉𝗈𝗋𝗍 𝖢𝗁𝖺𝗍</a> 𝖥𝗈𝗋 𝖪𝗇𝗈𝗐𝗂𝗇𝗀 𝖳𝗁𝖾 𝖱𝖾𝖺𝗌𝗈𝗇 .",
+                    text=f"{app.mention} Is Under Maintenance , Visit <a href={SUPPORT_GROUP}>Support Chat</a> For Knowing The Reason .",
                     disable_web_page_preview=True,
                 )
 
@@ -43,7 +43,7 @@ def AdminRightsCheck(mystic):
                 [
                     [
                         InlineKeyboardButton(
-                            text="𝖧𝗈𝗐 𝖳𝗈 𝖥𝗂𝗑 ?",
+                            text="How To Fix ?",
                             callback_data="AnonymousAdmin",
                         ),
                     ]
@@ -72,7 +72,7 @@ def AdminRightsCheck(mystic):
                     if message.from_user.id not in admins:
                         if await is_skipmode(message.chat.id):
                             upvote = await get_upvote_count(chat_id)
-                            text = f"""<b>𝖠𝖽𝗆𝗂𝗇 𝖱𝗂𝗀𝗁𝗍𝗌 𝖭𝖾𝖾𝖽𝖾𝖽</b>
+                            text = f"""<b>Admin Rights Needed</b>
 
 𝖱𝖾𝖿𝗋𝖾𝗌𝗁 𝖠𝖽𝗆𝗂𝗇 𝖢𝖺𝖼𝗁𝖾 𝖵𝗂𝖺 : /reload"""
 
@@ -86,7 +86,7 @@ def AdminRightsCheck(mystic):
                                 [
                                     [
                                         InlineKeyboardButton(
-                                            text="𝖢𝗅𝗈𝗌𝖾",
+                                            text="Close",
                                             callback_data="close",
                                         ),
                                     ]
@@ -118,7 +118,7 @@ def AdminActual(mystic):
         if await is_maintenance() is False:
             if message.from_user.id not in SUDOERS:
                 return await message.reply_text(
-                    text=f"{app.mention} 𝖨𝗌 𝖴𝗇𝖽𝖾𝗋 𝖬𝖺𝗂𝗇𝗍𝖾𝗇𝖺𝗇𝖼𝖾 , 𝖵𝗂𝗌𝗂𝗍 <a href={SUPPORT_GROUP}>𝖲𝗎𝗉𝗉𝗈𝗋𝗍 𝖢𝗁𝖺𝗍</a> 𝖥𝗈𝗋 𝖪𝗇𝗈𝗐𝗂𝗇𝗀 𝖳𝗁𝖾 𝖱𝖾𝖺𝗌𝗈𝗇 .",
+                    text=f"{app.mention} Is Under Maintenance , Visit <a href={SUPPORT_GROUP}>Support Chat</a> For Knowing The Reason .",
                     disable_web_page_preview=True,
                 )
 
@@ -137,7 +137,7 @@ def AdminActual(mystic):
                 [
                     [
                         InlineKeyboardButton(
-                            text="𝖧𝗈𝗐 𝖳𝗈 𝖥𝗂𝗑 ?",
+                            text="How To Fix ?",
                             callback_data="AnonymousAdmin",
                         ),
                     ]
@@ -163,7 +163,7 @@ def ActualAdminCB(mystic):
         if await is_maintenance() is False:
             if CallbackQuery.from_user.id not in SUDOERS:
                 return await CallbackQuery.answer(
-                    f"{app.mention} 𝖨𝗌 𝖴𝗇𝖽𝖾𝗋 𝖬𝖺𝗂𝗇𝗍𝖾𝗇𝖺𝗇𝖼𝖾 , 𝖵𝗂𝗌𝗂𝗍 𝖲𝗎𝗉𝗉𝗈𝗋𝗍 𝖢𝗁𝖺𝗍 𝖥𝗈𝗋 𝖪𝗇𝗈𝗐𝗂𝗇𝗀 𝖳𝗁𝖾 𝖱𝖾𝖺𝗌𝗈𝗇 .",
+                    f"{app.mention} Is Under Maintenance , Visit Support Chat For Knowing The Reason .",
                     show_alert=True,
                 )
         try:
