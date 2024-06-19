@@ -29,7 +29,7 @@ class Inflex(Client):
         try:
             await self.send_message(
                 chat_id=config.LOG_GROUP_ID,
-                text=f"<u><b>» {self.mention} 𝖡𝗈𝗍 𝖲𝗍𝖺𝗋𝗍𝖾𝖽 :</b><u>\n\n𝖨𝖣 : <code>{self.id}</code>\n𝖭𝖺𝗆𝖾 : {self.name}\n𝖴𝗌𝖾𝗋𝗇𝖺𝗆𝖾 : @{self.username}",
+                text=f"<u><b>» {self.mention} Bot Started :</b><u>\n\nId : <code>{self.id}</code>\nName : {self.name}\nUsername : @{self.username}",
             )
         except (errors.ChannelInvalid, errors.PeerIdInvalid):
             LOGGER(__name__).error(
