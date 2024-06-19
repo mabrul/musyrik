@@ -42,7 +42,7 @@ async def edit_or_reply(msg: Message, **kwargs):
 )
 async def executor(client: app, message: Message):
     if len(message.command) < 2:
-        return await edit_or_reply(message, text="<b>𝖶𝗁𝖺𝗍 𝖸𝗈𝗎 𝖶𝖺𝗇𝗇𝖺 𝖤𝗑𝖾𝖼𝗎𝗍𝖾 𝖡𝖺𝖻𝗒 ?</b>")
+        return await edit_or_reply(message, text="<b>What You Wanna Execute Baby ?</b>")
     try:
         cmd = message.text.split(" ", maxsplit=1)[1]
     except IndexError:
@@ -70,7 +70,7 @@ async def executor(client: app, message: Message):
         evaluation += stdout
     else:
         evaluation += "Success"
-    final_output = f"<b>⥤ ʀᴇsᴜʟᴛ :</b>\n<pre language='python'>{evaluation}</pre>"
+    final_output = f"<b>⥤ result :</b>\n<pre language='python'>{evaluation}</pre>"
     if len(final_output) > 4096:
         filename = "output.txt"
         with open(filename, "w+", encoding="utf8") as out_file:
@@ -80,7 +80,7 @@ async def executor(client: app, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        text="⏳",
+                        text="⚡",
                         callback_data=f"runtime {t2-t1} Seconds",
                     )
                 ]
@@ -88,7 +88,7 @@ async def executor(client: app, message: Message):
         )
         await message.reply_document(
             document=filename,
-            caption=f"<b>⥤ ᴇᴠᴀʟ :</b>\n<code>{cmd[0:980]}</code>\n\n<b>⥤ ʀᴇsᴜʟᴛ :</b>\nAttached Document",
+            caption=f"<b>⥤ eval :</b>\n<code>{cmd[0:980]}</code>\n\n<b>⥤ result :</b>\nAttached Document",
             quote=False,
             reply_markup=keyboard,
         )
@@ -100,7 +100,7 @@ async def executor(client: app, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        text="⏳",
+                        text="⚡",
                         callback_data=f"runtime {round(t2-t1, 3)} Seconds",
                     ),
                     InlineKeyboardButton(
@@ -127,7 +127,7 @@ async def forceclose_command(_, CallbackQuery):
     if CallbackQuery.from_user.id != int(user_id):
         try:
             return await CallbackQuery.answer(
-                "> 𝖨𝗍 𝖶𝗂𝗅𝗅 𝖡𝖾 𝖡𝖾𝗍𝗍𝖾𝗋 𝖨𝖿 𝖸𝗈𝗎 𝖲𝗍𝖺𝗒 𝖨𝗇 𝖸𝗈𝗎𝗋 𝖫𝗂𝗆𝗂𝗍𝗌 .", show_alert=True
+                "> It Will Be Better If You Stay In Your Limits .", show_alert=True
             )
         except:
             return
